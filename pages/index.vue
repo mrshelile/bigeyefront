@@ -50,9 +50,10 @@
         <div>
             <div class="grid gap-4">
                 <div> 
-                    <iframe  class="w-full" height="315" src="https://www.youtube.com/embed/3LXQWU67Ufk?si=hhcijQwOX66hHYtk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!-- <iframe  class="w-full" height="315" src="http://localhost:65432/" title="video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
                     <!-- <iframe class="h-auto max-w-full rounded-lg" src="https://www.youtube.com/watch?v=ZxL5Hm3mIBk" frameborder="0" allowfullscreen/> -->
                     <!-- <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt=""> -->
+                    <iframe id="video-stream" class="w-full rounded-lg"  height="315" src="http://127.0.0.1:5000/video_feed" title="video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"></iframe>
                 </div>
                 <div class="grid grid-cols-5 gap-4">
                     <div>
@@ -76,17 +77,12 @@
         </div>
     </div>
 </template>
-<script setup lang="ts">
-// This compiler macro works in both <script> and <script setup>
-definePageMeta({
-  // you can also pass a string or a computed property
-//   key: route => route.slug,
-  transition: {
-    name: 'index',
-  },
-  keepalive: {
-    exclude: ['modal']
-  },
-})
+<script lang="ts">
+
+export default {
+    name:"index"
+}
 </script>
+
+
   

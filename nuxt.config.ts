@@ -1,9 +1,13 @@
+import { defineNuxtConfig } from "nuxt/config";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   components:true,
   devtools: { enabled: true },
+
   // modules: ['@nuxtjs/tailwindcss']
   css: ['~/assets/css/main.css'],
+
   // modules: ['@nuxtjs/axios'],
   postcss: {
     plugins: {
@@ -11,4 +15,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
+  modules: ["@scalar/nuxt"]
 })
