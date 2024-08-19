@@ -16,5 +16,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@scalar/nuxt"]
+  modules: ["@scalar/nuxt", "@nuxt/image"]
 })
